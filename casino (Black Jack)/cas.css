@@ -1,0 +1,28 @@
+body{
+    background-image: url(green-background-texture-game-play-260nw-2756117157.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+h1{
+    color: goldenrod;
+    font-weight: 800;
+}
+h3{
+    color: rgb(253, 253, 194);
+}
+button{
+    display: block;
+    margin: 5px auto;
+    width: 200px;
+    height: 30px;
+    font-weight: 900;
+    color: rgb(1, 88, 20);
+    background-color: goldenrod;
+    border: none;
+    border-radius: 5px;
+}
+#message-el{
+    font-style: italic;
+}
