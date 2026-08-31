@@ -38,9 +38,7 @@ browseEl.addEventListener('click', async function () {
 
 })
 
-let response2 = await fetch(`api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apikey}`)
-let data2 = response2.json()
-console.log(data2)
+
 
 
 
