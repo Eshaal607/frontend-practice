@@ -1,0 +1,21 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "a dataset of planets most interesting places",
+  "homepage": "https://github.com/Eshaal607/frontend-practice#readme",
+  "bugs": {
+    "url": "https://github.com/Eshaal607/frontend-practice/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eshaal607/frontend-practice.git"
+  },
+  "license": "ISC",
+  "author": "Eshaal",
+  "type": "module",
+  "main": "node.js",
+  "scripts": {
+    "start": "node node.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
