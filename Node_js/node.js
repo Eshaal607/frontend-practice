@@ -1,15 +1,21 @@
 import http from 'node:http'
 import { getDataFromDB } from './db.js'
 import { error } from 'node:console'
-import { setutility,filter } from './utilityfunctions.js'
+import { setutility,filter,getdatabyqueryparams } from './utilityfunctions.js'
 const PORT = 3000
 
 
 const server = http.createServer(async(req,res) => {
     const destination = await getDataFromDB()
 
-    if(req.url === '/api' && req.method === 'GET'){
-        setutility(res, 200, destination)
+    const  urlObj = new URL(req.url, `https://${req.headers.host}`)
+
+    const queryObj = Object.fromEntries(urlObj.searchParams)
+    console.log(queryObj)
+
+    if(urlObj.pathname === '/api' && req.method === 'GET'){
+        let filterdata = getdatabyqueryparams(destination, queryObj)
+        setutility(res, 200, filterdata)
     }
     else if(req.url.startsWith('/api/continent') && req.method === 'GET'){
         let continent = req.url.split('/').pop()
